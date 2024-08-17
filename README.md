@@ -1,1 +1,1 @@
-# Kokuryo-Festival-Roulette
+# 文化祭で作ったルーレットプログラム（必ず外れます）
