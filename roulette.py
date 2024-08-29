@@ -9,7 +9,7 @@ class RouletteApp:
         self.root.geometry("1000x700")
         self.root.configure(bg="#191970")
 
-        self.choices = ["当たり", "外れ", "外れ", "外れ", "外れ", "外れ"]
+        self.choices = ["当たり", "当たり", "当たり", "当たり", "当たり", "外れ"]
         self.labels = []
         self.create_widgets()
         self.running = False
@@ -32,6 +32,10 @@ class RouletteApp:
 
         self.start_button = ttk.Button(self.root, text="スタート", command=self.start_roulette)
         self.start_button.pack(side="left", padx=20, pady=20)
+
+        # 右上に小さくテキストを表示するラベルを追加
+        self.top_right_label = tk.Label(self.root, text="水泳　混合チョバナ決勝", font=("Helvetica", 12), bg="#191970", fg="white")
+        self.top_right_label.place(relx=1.0, rely=0.0, anchor="ne", x=-10, y=10)  # 右上に配置
 
     def start_roulette(self):
         self.running = True
